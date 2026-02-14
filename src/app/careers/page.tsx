@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import PageContainer from '@/components/ui/PageContainer';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
+import BackButton from '@/components/ui/BackButton';
 
 export default function CareersPage() {
   const jobs = [
@@ -36,6 +37,7 @@ export default function CareersPage() {
 
   return (
     <PageContainer>
+      <BackButton />
       <motion.div 
         className="max-w-3xl mx-auto text-center mb-16"
         initial={{ opacity: 0, y: 20 }}
