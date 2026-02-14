@@ -33,13 +33,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-[#F6F7FB] to-white pt-16">
-      <motion.div
-        className="absolute inset-0 opacity-30"
-        style={{
-          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(42, 154, 214, 0.15), transparent 40%)`,
-        }}
-      />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       
       <div className="relative z-20 max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-40 text-center">
         <motion.div
