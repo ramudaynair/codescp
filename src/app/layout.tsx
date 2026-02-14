@@ -8,8 +8,8 @@ import Aurora from '@/components/ui/Aurora';
 const plusJakarta = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'] });
 
 export const metadata: Metadata = {
-  title: 'CODESCAPE - Where Creativity Meets Technology',
-  description: 'We are passionate about creating stunning and functional websites and applications that not only capture attention but also drive results for our clients.',
+  title: 'CODESCAPE - Your Success is our Mission',
+  description: 'An engineering-first technology partner delivering value through innovation, technological excellence and quality. We ensure every solution is reliable, scalable, and impactful.',
 };
 
 export default function RootLayout({

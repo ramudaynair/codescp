@@ -25,10 +25,10 @@ export default function AboutPage() {
           >
             <Card className="p-8 md:p-12">
               <p className="text-xl text-[#374151] mb-6 leading-relaxed">
-                We specialize in crafting captivating websites, seamless e-commerce solutions, and cutting-edge app developments. Our passion extends beyond code; it&apos;s about transforming ideas into immersive digital experiences.
+                CODESCAPE is an engineering-first technology partner. We specialize in crafting captivating websites, seamless e-commerce solutions, and cutting-edge app developments. Our passion extends beyond code; it&apos;s about transforming ideas into immersive digital experiences.
               </p>
               <p className="text-xl text-[#374151] leading-relaxed">
-                Join us on a journey where innovation meets functionality, and your success becomes our mission. Your success is not just a goal; it&apos;s our commitment. At CODESCAPE, we&apos;re not just a service provider; we&apos;re your digital partner, dedicated to transforming possibilities into realities.
+                Join us on a journey where innovation meets functionality. At CODESCAPE, we&apos;re not just a service provider; we&apos;re your digital partner, dedicated to transforming possibilities into realities.
               </p>
             </Card>
           </motion.section>

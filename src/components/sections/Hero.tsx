@@ -89,7 +89,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="text-xl sm:text-2xl lg:text-3xl text-[#374151] mb-16 max-w-4xl mx-auto leading-relaxed font-medium"
         >
-          We believe that a well established digital presence is the cornerstone of any successful online presence.
+          Your Success is our Mission
         </motion.p>
         
         <motion.div 
