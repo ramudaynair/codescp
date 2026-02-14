@@ -13,7 +13,7 @@ export default function ClientLogos() {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-[#F6F7FB] border-y border-[#E5E7EB]">
+    <section className="py-24 md:py-32 bg-gradient-to-b from-slate-50 to-white border-y border-slate-200">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,7 +22,7 @@ export default function ClientLogos() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
-          <p className="text-xs font-bold text-[#6B7280] uppercase tracking-wider">
+          <p className="text-xs font-bold text-slate-600 uppercase tracking-wider">
             Trusted by Industry Leaders
           </p>
         </motion.div>
@@ -44,19 +44,16 @@ export default function ClientLogos() {
             <motion.div
               key={index}
               variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 20, scale: 0.95 },
+                visible: { opacity: 1, y: 0, scale: 1 },
               }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="flex items-center justify-center"
+              whileHover={{ scale: 1.1, y: -5 }}
             >
-              <motion.div 
-                className="text-2xl font-bold text-[#6B7280] transition-colors duration-300"
-                whileHover={{ scale: 1.05, color: '#374151' }}
-                transition={{ duration: 0.2 }}
-              >
+              <div className="text-xl md:text-2xl font-bold text-slate-600 hover:text-indigo-600 transition-colors duration-300 text-center">
                 {client}
-              </motion.div>
+              </div>
             </motion.div>
           ))}
         </motion.div>

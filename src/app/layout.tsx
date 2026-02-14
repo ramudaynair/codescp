@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import DottedBackground from '@/components/ui/DottedBackground';
 
 const plusJakarta = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'] });
 
@@ -22,8 +23,9 @@ export default function RootLayout({
         {/* Analytics tracking script placeholder */}
       </head>
       <body className={plusJakarta.className}>
+        <DottedBackground />
         <Navbar />
-        <main>{children}</main>
+        <main className="relative z-10">{children}</main>
         <Footer />
       </body>
     </html>

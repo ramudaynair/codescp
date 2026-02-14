@@ -17,7 +17,7 @@ export default function MetricCard({ value, label, className = '' }: MetricCardP
     >
       <Card className={`p-8 text-center ${className}`}>
         <motion.div 
-          className="text-5xl font-bold text-[#0F172A] mb-3"
+          className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent mb-3"
           initial={{ scale: 0.5, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
@@ -25,7 +25,7 @@ export default function MetricCard({ value, label, className = '' }: MetricCardP
         >
           {value}
         </motion.div>
-        <div className="text-sm text-[#6B7280] font-medium">{label}</div>
+        <div className="text-sm text-slate-600 font-medium">{label}</div>
       </Card>
     </motion.div>
   );

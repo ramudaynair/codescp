@@ -17,6 +17,23 @@ export default function Navbar() {
     { href: '/contact', label: 'Contact' },
   ];
 
+  const menuVariants = {
+    closed: { opacity: 0, height: 0 },
+    open: { 
+      opacity: 1, 
+      height: 'auto',
+      transition: {
+        staggerChildren: 0.07,
+        delayChildren: 0.1,
+      }
+    }
+  };
+
+  const itemVariants = {
+    closed: { opacity: 0, x: -20 },
+    open: { opacity: 1, x: 0 }
+  };
+
   return (
     <motion.nav 
       initial={{ y: -100, opacity: 0 }}
@@ -94,20 +111,17 @@ export default function Navbar() {
         <AnimatePresence>
           {isOpen && (
             <motion.div 
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+              variants={menuVariants}
+              initial="closed"
+              animate="open"
+              exit="closed"
               className="md:hidden border-t border-white/20 overflow-hidden"
             >
               <div className="px-6 py-4 space-y-1">
-                {links.map((link, index) => (
+                {links.map((link) => (
                   <motion.div
                     key={link.href}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                    variants={itemVariants}
                   >
                     <Link
                       href={link.href}

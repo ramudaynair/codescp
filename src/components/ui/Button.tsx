@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 interface ButtonProps {
   children: ReactNode;
-  variant?: 'primary' | 'outline';
+  variant?: 'primary' | 'outline' | 'secondary' | 'glassy';
   size?: 'md' | 'lg';
   className?: string;
   disabled?: boolean;
@@ -20,11 +20,13 @@ export default function Button({
   className = '',
   ...props 
 }: ButtonProps) {
-  const baseStyles = 'font-bold rounded-xl transition-all duration-200 inline-block border relative overflow-hidden';
+  const baseStyles = 'font-semibold rounded-xl transition-all duration-300 inline-flex items-center justify-center border relative overflow-hidden';
   
   const variants = {
-    primary: 'glass-dark text-white border-white/10 shadow-lg',
-    outline: 'glass border-[#E5E7EB] text-[#0F172A]',
+    primary: 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-0 shadow-lg hover:shadow-xl',
+    secondary: 'bg-indigo-500/10 text-indigo-600 border-0 hover:bg-indigo-500/20',
+    outline: 'bg-white border-2 border-slate-200 text-slate-800 hover:border-slate-300 hover:bg-slate-50',
+    glassy: 'glass-button text-white font-medium',
   };
 
   const sizes = {
@@ -35,20 +37,14 @@ export default function Button({
   return (
     <motion.button
       whileHover={{ 
-        scale: 1.05,
+        scale: variant === 'primary' ? 1.05 : 1.02,
         y: -2,
       }}
-      whileTap={{ scale: 0.95 }}
+      whileTap={{ scale: 0.98 }}
       transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
       className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
       {...(props as any)}
     >
-      <motion.span
-        className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent"
-        initial={{ x: '-100%' }}
-        whileHover={{ x: '100%' }}
-        transition={{ duration: 0.6 }}
-      />
       <span className="relative z-10">{children}</span>
     </motion.button>
   );

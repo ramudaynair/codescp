@@ -13,7 +13,7 @@ export default function Stats() {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-[#F6F7FB]">
+    <section className="py-16 md:py-24 bg-white">
       <Container>
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-4 gap-6"
