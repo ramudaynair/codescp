@@ -4,10 +4,12 @@ import { motion } from 'framer-motion';
 import PageContainer from '@/components/ui/PageContainer';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
+import BackButton from '@/components/ui/BackButton';
 
 export default function ContactPage() {
   return (
     <PageContainer>
+      <BackButton />
       <div className="max-w-3xl mx-auto">
         <motion.div 
           className="text-center mb-16"

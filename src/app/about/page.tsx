@@ -3,10 +3,12 @@
 import { motion } from 'framer-motion';
 import PageContainer from '@/components/ui/PageContainer';
 import Card from '@/components/ui/Card';
+import BackButton from '@/components/ui/BackButton';
 
 export default function AboutPage() {
   return (
     <PageContainer>
+      <BackButton />
       <div className="max-w-4xl mx-auto">
         <motion.h1 
           className="text-5xl md:text-6xl font-bold mb-8 text-center text-[#0F172A] tracking-tight"
