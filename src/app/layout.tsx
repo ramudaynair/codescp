@@ -6,6 +6,7 @@ import Footer from '@/components/layout/Footer';
 import Aurora from '@/components/ui/Aurora';
 import WhatsAppButton from '@/components/ui/WhatsAppButton';
 import LoadingScreen from '@/components/ui/LoadingScreen';
+import ThemeColorMeta from '@/components/ui/ThemeColorMeta';
 
 const plusJakarta = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'] });
 
@@ -25,8 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-        <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#ffffff" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-S5VF8QXGZ5"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -40,6 +40,7 @@ export default function RootLayout({
         />
       </head>
       <body className={plusJakarta.className}>
+        <ThemeColorMeta />
         <LoadingScreen />
         <Aurora />
         <Navbar />
