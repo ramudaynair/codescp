@@ -97,6 +97,7 @@ codescp/
 - **Challenge:** Recreate/Build CODESCAPE company website
 - **Duration:** 6 Hours
 - **Year:** 2026
+- **Achievement:** Innovation Excellence Award
 
 ## 📝 License
 
@@ -107,13 +108,6 @@ This project was created for the Capeathon hackathon.
 - CODESCAPE for the opportunity and design inspiration
 - IEDC MACE for organizing the hackathon
 - All mentors and organizers who supported the event
-
-## 📧 Contact
-
-For any queries regarding this project:
-- Email: contact@thecodescape.in
-- Instagram: [@thecodescape](https://instagram.com/thecodescape)
-- Phone: +91 8921258262
 
 ---
 
