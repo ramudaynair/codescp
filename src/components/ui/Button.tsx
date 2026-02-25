@@ -23,8 +23,8 @@ export default function Button({
   const baseStyles = 'font-semibold rounded-xl transition-all duration-300 inline-flex items-center justify-center border relative overflow-hidden';
   
   const variants = {
-    primary: 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-0 shadow-lg hover:shadow-xl',
-    secondary: 'bg-indigo-500/10 text-indigo-600 border-0 hover:bg-indigo-500/20',
+    primary: 'bg-gradient-to-r from-sky-500 to-sky-600 text-white border-0 shadow-lg hover:shadow-xl',
+    secondary: 'bg-sky-500/10 text-sky-500 border-0 hover:bg-sky-500/20',
     outline: 'bg-white border-2 border-slate-200 text-slate-800 hover:border-slate-300 hover:bg-slate-50',
     glassy: 'glass-button text-white font-medium',
   };

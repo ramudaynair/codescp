@@ -63,9 +63,9 @@ export default function ServicesPreview() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <Card key={index} className="p-8 h-full group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 to-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-sky-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <motion.div 
-                className="relative z-10 w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white mb-6"
+                className="relative z-10 w-16 h-16 bg-gradient-to-br from-sky-500 to-sky-600 rounded-2xl flex items-center justify-center text-white mb-6"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
               >
@@ -84,7 +84,7 @@ export default function ServicesPreview() {
           transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mt-16"
         >
-          <Link href="/services" className="text-indigo-600 hover:text-indigo-700 font-semibold text-base inline-flex items-center gap-2 transition-colors group">
+          <Link href="/services" className="text-sky-500 hover:text-sky-600 font-semibold text-base inline-flex items-center gap-2 transition-colors group">
             View All Services
             <motion.svg 
               className="w-5 h-5" 

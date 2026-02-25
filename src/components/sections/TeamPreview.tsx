@@ -8,28 +8,24 @@ import Image from 'next/image';
 export default function TeamPreview() {
   const team = [
     {
-      name: 'Alex Thompson',
-      role: 'Chief Technology Officer',
-      expertise: 'Architecture & AI',
-      image: '/WhatsApp Image 2026-02-14 at 3.48.24 PM.jpeg',
+      name: 'Samuel Saji',
+      role: 'CEO/Founder',
+      image: '/1751171842039.jpg',
     },
     {
-      name: 'Maria Garcia',
-      role: 'Head of Engineering',
-      expertise: 'Full-Stack Development',
-      image: '/WhatsApp Image 2026-02-14 at 3.48.25 PM (1).jpeg',
+      name: 'Joel Saji',
+      role: 'Frontend Developer',
+      image: '/1771430023534.jpg',
     },
     {
-      name: 'James Chen',
-      role: 'Lead DevOps Engineer',
-      expertise: 'Infrastructure & Automation',
-      image: '/WhatsApp Image 2026-02-14 at 3.48.25 PM.jpeg',
+      name: 'Jithin MP',
+      role: 'Backend Developer',
+      image: '/1771430028252.jpg',
     },
     {
-      name: 'Sarah Williams',
-      role: 'Principal Software Architect',
-      expertise: 'System Design & Scalability',
-      image: '/WhatsApp Image 2026-02-14 at 3.48.25 PM (2).jpeg',
+      name: 'Eldho G Blayil',
+      role: 'Social Media Manager',
+      image: '/1751172353463.jpg',
     },
   ];
 
@@ -73,7 +69,7 @@ export default function TeamPreview() {
             >
               <Card className="p-8 text-center h-full">
                 <motion.div 
-                  className="w-24 h-24 rounded-full mx-auto mb-6 overflow-hidden bg-gradient-to-br from-indigo-600 to-blue-600"
+                  className="w-24 h-24 rounded-full mx-auto mb-6 overflow-hidden bg-sky-500"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                 >
@@ -86,11 +82,8 @@ export default function TeamPreview() {
                   />
                 </motion.div>
                 <h3 className="text-xl font-black mb-2 text-slate-900 tracking-tight">{member.name}</h3>
-                <p className="text-sm font-semibold text-slate-600 mb-3">
+                <p className="text-sm font-semibold text-slate-600">
                   {member.role}
-                </p>
-                <p className="text-sm text-slate-600">
-                  {member.expertise}
                 </p>
               </Card>
             </motion.div>
@@ -104,7 +97,7 @@ export default function TeamPreview() {
           transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mt-16"
         >
-          <Link href="/about" className="text-indigo-600 hover:text-indigo-700 font-semibold text-base inline-flex items-center gap-2 transition-colors group">
+          <Link href="/about" className="text-sky-500 hover:text-sky-600 font-semibold text-base inline-flex items-center gap-2 transition-colors group">
             Meet the Full Team
             <motion.svg 
               className="w-5 h-5" 

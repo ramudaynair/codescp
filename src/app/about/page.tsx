@@ -111,12 +111,53 @@ export default function AboutPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h2 className="text-3xl font-bold mb-6 text-[#0F172A] tracking-tight">Our Team</h2>
-            <Card className="p-8">
-              <p className="text-lg text-[#374151] text-center leading-relaxed">
-                A passionate team of designers, developers, and digital strategists committed to your success.
-              </p>
-            </Card>
+            <h2 className="text-3xl font-bold mb-8 text-[#0F172A] tracking-tight">Our Team</h2>
+            <motion.div 
+              className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: {
+                  transition: {
+                    staggerChildren: 0.1,
+                  },
+                },
+              }}
+            >
+              {[
+                { name: 'Samuel Saji', role: 'CEO/Founder', image: '/1751171842039.jpg' },
+                { name: 'Joel Saji', role: 'Frontend Developer', image: '/1771430023534.jpg' },
+                { name: 'Jithin MP', role: 'Backend Developer', image: '/1771430028252.jpg' },
+                { name: 'Eldho G Blayil', role: 'Social Media Manager', image: '/1751172353463.jpg' },
+              ].map((member, i) => (
+                <motion.div
+                  key={i}
+                  variants={{
+                    hidden: { opacity: 0, y: 30 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  whileHover={{ y: -8 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Card className="p-6 text-center h-full">
+                    <motion.div 
+                      className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-sky-500"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </motion.div>
+                    <h3 className="text-lg font-bold mb-1 text-[#0F172A] tracking-tight">{member.name}</h3>
+                    <p className="text-sm text-[#374151]">{member.role}</p>
+                  </Card>
+                </motion.div>
+              ))}
+            </motion.div>
           </motion.section>
         </div>
       </div>

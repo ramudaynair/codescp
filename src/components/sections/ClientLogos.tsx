@@ -51,7 +51,7 @@ export default function ClientLogos() {
               className="flex items-center justify-center"
               whileHover={{ scale: 1.1, y: -5 }}
             >
-              <div className="text-xl md:text-2xl font-bold text-slate-600 hover:text-indigo-600 transition-colors duration-300 text-center">
+              <div className="text-xl md:text-2xl font-bold text-slate-600 hover:text-sky-500 transition-colors duration-300 text-center">
                 {client}
               </div>
             </motion.div>

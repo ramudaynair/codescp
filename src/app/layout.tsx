@@ -10,6 +10,9 @@ const plusJakarta = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '500
 export const metadata: Metadata = {
   title: 'CODESCAPE - Your Success is our Mission',
   description: 'An engineering-first technology partner delivering value through innovation, technological excellence and quality. We ensure every solution is reliable, scalable, and impactful.',
+  icons: {
+    icon: '/no-bg-icon.png',
+  },
 };
 
 export default function RootLayout({

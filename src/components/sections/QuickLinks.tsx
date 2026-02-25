@@ -82,14 +82,14 @@ export default function QuickLinks() {
             >
               <Link href={link.href}>
                 <Card className="p-6 h-full group hover:shadow-lg transition-all duration-300">
-                  <div className="text-[#0F172A] group-hover:text-[#2A9AD6] transition-colors mb-4">
+                  <div className="text-[#0F172A] group-hover:text-sky-500 transition-colors mb-4">
                     {link.icon}
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-[#0F172A] tracking-tight group-hover:text-[#2A9AD6] transition-colors">
+                  <h3 className="text-xl font-bold mb-2 text-[#0F172A] tracking-tight group-hover:text-sky-500 transition-colors">
                     {link.title}
                   </h3>
                   <p className="text-[#374151] text-sm leading-relaxed mb-4">{link.description}</p>
-                  <div className="flex items-center text-[#2A9AD6] text-sm font-semibold group-hover:gap-2 transition-all">
+                  <div className="flex items-center text-sky-500 text-sm font-semibold group-hover:gap-2 transition-all">
                     Learn more
                     <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

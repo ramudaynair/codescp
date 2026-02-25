@@ -39,12 +39,12 @@ export default function Hero() {
       <section className="relative min-h-[90vh] flex items-center justify-center pt-16 pb-8">
         <div className="relative z-20 max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-20 text-center">
           <div className="inline-flex items-center gap-2 mb-10 px-4 py-2 glass rounded-full shadow-lg">
-            <div className="w-2 h-2 bg-[#2A9AD6] rounded-full" />
+            <div className="w-2 h-2 bg-sky-500 rounded-full" />
             <span className="text-xs font-bold text-[#0F172A] uppercase tracking-wider">CODESCAPE</span>
           </div>
           <div className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-extrabold mb-10 leading-[1.15] tracking-tighter pb-6">
             <div className="text-[#0F172A]">{title1}</div>
-            <div className="text-[#2A9AD6]">{title2}</div>
+            <div className="text-sky-500">{title2}</div>
           </div>
           <p className="text-xl sm:text-2xl lg:text-3xl text-[#374151] mb-16 max-w-4xl mx-auto leading-relaxed font-medium">
             Your Success is our Mission
@@ -68,7 +68,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 mb-10 px-4 py-2 glass rounded-full shadow-lg"
         >
           <motion.div
-            className="w-2 h-2 bg-[#2A9AD6] rounded-full"
+            className="w-2 h-2 bg-sky-500 rounded-full"
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           />
@@ -99,7 +99,7 @@ export default function Hero() {
                 variants={letterVariants}
                 initial="hidden"
                 animate="visible"
-                className="inline-block text-[#2A9AD6]"
+                className="inline-block text-sky-500"
                 style={{ display: char === ' ' ? 'inline' : 'inline-block' }}
               >
                 {char === ' ' ? '\u00A0' : char}
