@@ -31,6 +31,7 @@ export default function Hero() {
     const saved = localStorage.getItem('theme') as 'light' | 'dark' | null;
     const initial = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     setTheme(initial);
+    document.documentElement.classList.toggle('dark', initial === 'dark');
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
