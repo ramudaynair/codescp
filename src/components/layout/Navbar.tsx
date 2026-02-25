@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import ThemeToggle from '@/components/ui/ThemeToggle';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +47,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className="fixed top-0 w-full z-50"
     >
-      <div className="glass shadow-lg">
+      <div className="glass shadow-lg dark:bg-slate-800/70 dark:border-slate-700/30">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex justify-between items-center h-16">
             <motion.div
@@ -59,7 +60,7 @@ export default function Navbar() {
                   alt="CODESCAPE Logo" 
                   width={140} 
                   height={40}
-                  className="h-auto w-[140px]"
+                  className="h-auto w-[140px] dark:[filter:invert(1)_hue-rotate(180deg)]"
                   priority
                 />
               </Link>
@@ -75,24 +76,25 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="relative px-4 py-2 text-sm font-semibold text-[#374151] rounded-lg overflow-hidden group"
+                    className="relative px-4 py-2 text-sm font-semibold text-[#374151] dark:text-slate-200 rounded-lg overflow-hidden group"
                   >
                     <motion.span
-                      className="absolute inset-0 bg-white/40"
+                      className="absolute inset-0 bg-white/40 dark:bg-slate-700/40"
                       initial={{ scale: 0 }}
                       whileHover={{ scale: 1 }}
                       transition={{ duration: 0.3 }}
                     />
-                    <span className="relative z-10 group-hover:text-[#2A9AD6] transition-colors">{link.label}</span>
+                    <span className="relative z-10 group-hover:text-[#2A9AD6] dark:group-hover:text-sky-400 transition-colors">{link.label}</span>
                   </Link>
                 </motion.div>
               ))}
+              <ThemeToggle />
             </div>
 
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="md:hidden p-2 rounded-lg text-[#374151] hover:bg-white/40"
+              className="md:hidden p-2 rounded-lg text-[#374151] dark:text-slate-200 hover:bg-white/40 dark:hover:bg-slate-700/40"
               onClick={() => setIsOpen(!isOpen)}
             >
               <motion.svg 
@@ -120,7 +122,7 @@ export default function Navbar() {
               initial="closed"
               animate="open"
               exit="closed"
-              className="md:hidden border-t border-white/20 overflow-hidden"
+              className="md:hidden border-t border-white/20 dark:border-slate-700/30 overflow-hidden"
             >
               <div className="px-6 py-4 space-y-1">
                 {links.map((link) => (
@@ -130,7 +132,7 @@ export default function Navbar() {
                   >
                     <Link
                       href={link.href}
-                      className="block px-4 py-2 text-sm font-semibold text-[#374151] hover:text-[#2A9AD6] rounded-lg hover:bg-white/40 transition-all duration-200"
+                      className="block px-4 py-2 text-sm font-semibold text-[#374151] dark:text-slate-200 hover:text-[#2A9AD6] dark:hover:text-sky-400 rounded-lg hover:bg-white/40 dark:hover:bg-slate-700/40 transition-all duration-200"
                       onClick={() => setIsOpen(false)}
                     >
                       {link.label}
