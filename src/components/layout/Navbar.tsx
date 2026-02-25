@@ -91,7 +91,8 @@ export default function Navbar() {
               <ThemeToggle />
             </div>
 
-            <motion.button
+            <div className="md:hidden flex items-center gap-2">
+              <ThemeToggle />
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="md:hidden p-2 rounded-lg text-[#374151] dark:text-slate-200 hover:bg-white/40 dark:hover:bg-slate-700/40"
