@@ -54,8 +54,8 @@ export default function BlogPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#0F172A] tracking-tight">Blog</h1>
-        <p className="text-xl text-[#374151] leading-relaxed">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#0F172A] dark:text-slate-100 tracking-tight">Blog</h1>
+        <p className="text-xl text-[#374151] dark:text-slate-300 leading-relaxed">
           Insights and perspectives from our engineering team.
         </p>
       </motion.div>
@@ -83,13 +83,13 @@ export default function BlogPage() {
             whileHover={{ y: -8 }}
           >
             <Card className="p-8 cursor-pointer">
-              <div className="flex items-center gap-4 text-sm text-[#6B7280] mb-3">
+              <div className="flex items-center gap-4 text-sm text-[#6B7280] dark:text-slate-400 mb-3">
                 <span>{article.date}</span>
                 <span>•</span>
                 <span>{article.readTime}</span>
               </div>
-              <h2 className="text-3xl font-bold mb-4 text-[#0F172A] tracking-tight">{article.title}</h2>
-              <p className="text-lg text-[#374151] leading-relaxed">{article.excerpt}</p>
+              <h2 className="text-3xl font-bold mb-4 text-[#0F172A] dark:text-slate-100 tracking-tight">{article.title}</h2>
+              <p className="text-lg text-[#374151] dark:text-slate-300 leading-relaxed">{article.excerpt}</p>
             </Card>
           </motion.div>
         ))}

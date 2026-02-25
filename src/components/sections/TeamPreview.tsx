@@ -30,7 +30,7 @@ export default function TeamPreview() {
   ];
 
   return (
-    <section className="py-32 md:py-40 bg-gradient-to-b from-white to-slate-50">
+    <section className="py-32 md:py-40 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,8 +39,8 @@ export default function TeamPreview() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-slate-900 tracking-tight">Meet Our Team</h2>
-          <p className="text-xl text-slate-600 leading-relaxed">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-slate-900 dark:text-slate-100 tracking-tight">Meet Our Team</h2>
+          <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
             Expert engineers and innovators driving excellence
           </p>
         </motion.div>
@@ -81,8 +81,8 @@ export default function TeamPreview() {
                     className="w-full h-full object-cover"
                   />
                 </motion.div>
-                <h3 className="text-xl font-black mb-2 text-slate-900 tracking-tight">{member.name}</h3>
-                <p className="text-sm font-semibold text-slate-600">
+                <h3 className="text-xl font-black mb-2 text-slate-900 dark:text-slate-100 tracking-tight">{member.name}</h3>
+                <p className="text-sm font-semibold text-slate-600 dark:text-slate-300">
                   {member.role}
                 </p>
               </Card>

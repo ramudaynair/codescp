@@ -30,7 +30,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-0 md:py-20 bg-white">
+    <section className="py-0 md:py-20 bg-white dark:bg-slate-900">
       <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,10 +39,10 @@ export default function FAQ() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-5xl font-black mb-6 text-slate-900 tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-5xl font-black mb-6 text-slate-900 dark:text-slate-100 tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
             Everything you need to know about working with us
           </p>
         </motion.div>
@@ -55,15 +55,15 @@ export default function FAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="bg-white border border-slate-200 rounded-2xl overflow-hidden"
+              className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-slate-50 transition-colors"
+                className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
               >
-                <span className="text-lg font-semibold text-slate-900 pr-8">{faq.question}</span>
+                <span className="text-lg font-semibold text-slate-900 dark:text-slate-100 pr-8">{faq.question}</span>
                 <motion.svg
-                  className="w-6 h-6 text-indigo-600 flex-shrink-0"
+                  className="w-6 h-6 text-indigo-600 dark:text-sky-400 flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -82,7 +82,7 @@ export default function FAQ() {
                 transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                 className="overflow-hidden"
               >
-                <div className="px-8 pb-6 text-base text-slate-700 leading-relaxed">
+                <div className="px-8 pb-6 text-base text-slate-700 dark:text-slate-300 leading-relaxed">
                   {faq.answer}
                 </div>
               </motion.div>

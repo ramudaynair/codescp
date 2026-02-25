@@ -48,8 +48,8 @@ export default function ProjectsPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#0F172A] tracking-tight">Our Projects</h1>
-        <p className="text-xl text-[#374151] leading-relaxed">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#0F172A] dark:text-slate-100 tracking-tight">Our Projects</h1>
+        <p className="text-xl text-[#374151] dark:text-slate-300 leading-relaxed">
           Transforming ideas into successful digital solutions across industries.
         </p>
       </motion.div>
@@ -77,11 +77,11 @@ export default function ProjectsPage() {
             whileHover={{ y: -8 }}
           >
             <Card className="p-8 h-full cursor-pointer">
-              <div className="text-sm font-semibold text-[#2A9AD6] mb-3">
+              <div className="text-sm font-semibold text-[#2A9AD6] dark:text-sky-400 mb-3">
                 {project.category}
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-[#0F172A] tracking-tight">{project.title}</h3>
-              <p className="text-[#374151] leading-relaxed">{project.description}</p>
+              <h3 className="text-2xl font-bold mb-4 text-[#0F172A] dark:text-slate-100 tracking-tight">{project.title}</h3>
+              <p className="text-[#374151] dark:text-slate-300 leading-relaxed">{project.description}</p>
             </Card>
           </motion.div>
         ))}

@@ -25,7 +25,7 @@ export default function Button({
   const variants = {
     primary: 'bg-gradient-to-r from-sky-500 to-sky-600 text-white border-0 shadow-lg hover:shadow-xl',
     secondary: 'bg-sky-500/10 text-sky-500 border-0 hover:bg-sky-500/20',
-    outline: 'bg-white border-2 border-slate-200 text-slate-800 hover:border-slate-300 hover:bg-slate-50',
+    outline: 'bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700',
     glassy: 'glass-button text-white font-medium',
   };
 

@@ -6,19 +6,19 @@ import Link from 'next/link';
 
 export default function MidCTA() {
   return (
-    <section className="py-24 md:py-32 lg:py-40 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-24 md:py-32 lg:py-40 bg-gradient-to-b from-slate-50 to-white dark:from-slate-800 dark:to-slate-900">
       <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="bg-gradient-to-br from-white to-slate-50 border border-slate-200 rounded-3xl p-12 md:p-16 text-center shadow-lg"
+          className="bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 border border-slate-200 dark:border-slate-700 rounded-3xl p-12 md:p-16 text-center shadow-lg"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-5xl font-black mb-6 text-slate-900 tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-5xl font-black mb-6 text-slate-900 dark:text-slate-100 tracking-tight">
             Ready to Start Your Project?
           </h2>
-          <p className="text-lg md:text-xl text-slate-700 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
             Let's discuss how we can help transform your digital presence and drive real results for your business.
           </p>
           <motion.div

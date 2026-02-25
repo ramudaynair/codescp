@@ -9,7 +9,7 @@ export default function BackButton() {
   return (
     <motion.button
       onClick={() => router.back()}
-      className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-[#374151] hover:text-[#2A9AD6] transition-colors"
+      className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-[#374151] dark:text-slate-300 hover:text-[#2A9AD6] dark:hover:text-sky-400 transition-colors"
       whileHover={{ x: -4 }}
       whileTap={{ scale: 0.95 }}
       initial={{ opacity: 0, x: -20 }}

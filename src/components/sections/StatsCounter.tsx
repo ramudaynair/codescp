@@ -41,7 +41,7 @@ export default function StatsCounter() {
   ];
 
   return (
-    <section className="py-20 md:py-24 bg-gradient-to-br from-sky-500 to-sky-600 text-white">
+    <section className="py-20 md:py-24 bg-gradient-to-br from-sky-500 to-sky-600 dark:from-sky-600 dark:to-sky-700 text-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

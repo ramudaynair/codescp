@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function CTA() {
   return (
-    <section className="py-12 md:py-16 bg-white">
+    <section className="py-12 md:py-16 bg-white dark:bg-slate-900">
       <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -15,7 +15,7 @@ export default function CTA() {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         >
           <motion.h2 
-            className="text-4xl md:text-5xl lg:text-5xl font-black text-slate-900 mb-8 tracking-tight leading-tight"
+            className="text-4xl md:text-5xl lg:text-5xl font-black text-slate-900 dark:text-slate-100 mb-8 tracking-tight leading-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -24,7 +24,7 @@ export default function CTA() {
             Ready to Transform Your Digital Presence?
           </motion.h2>
           <motion.p 
-            className="text-lg md:text-xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

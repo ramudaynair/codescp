@@ -19,7 +19,7 @@ export default function Card({ children, className = '' }: CardProps) {
         y: -10,
         transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] }
       }}
-      className={`bg-white border border-slate-100 rounded-3xl shadow-md hover:shadow-2xl transition-shadow duration-300 ${className}`}
+      className={`bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-3xl shadow-md hover:shadow-2xl transition-shadow duration-300 ${className}`}
     >
       {children}
     </motion.div>

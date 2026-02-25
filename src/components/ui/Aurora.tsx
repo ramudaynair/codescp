@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function Aurora() {
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-      <div className="absolute inset-0 bg-white" />
+      <div className="absolute inset-0 bg-white dark:bg-slate-900" />
       
       <motion.div
         className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full"

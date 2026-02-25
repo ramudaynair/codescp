@@ -45,7 +45,7 @@ export default function ServicesPreview() {
   ];
 
   return (
-    <section className="py-24 md:py-32 lg:py-40 bg-gradient-to-b from-white to-slate-50">
+    <section className="py-24 md:py-32 lg:py-40 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -54,8 +54,8 @@ export default function ServicesPreview() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-5xl font-black mb-6 text-slate-900 tracking-tight">Our Services</h2>
-          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          <h2 className="text-4xl md:text-5xl lg:text-5xl font-black mb-6 text-slate-900 dark:text-slate-100 tracking-tight">Our Services</h2>
+          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
             Comprehensive digital solutions tailored to your needs
           </p>
         </motion.div>
@@ -63,7 +63,7 @@ export default function ServicesPreview() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <Card key={index} className="p-8 h-full group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-sky-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-sky-50 to-cyan-50 dark:from-sky-900/20 dark:to-cyan-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <motion.div 
                 className="relative z-10 w-16 h-16 bg-gradient-to-br from-sky-500 to-sky-600 rounded-2xl flex items-center justify-center text-white mb-6"
                 whileHover={{ scale: 1.1, rotate: 5 }}
@@ -71,8 +71,8 @@ export default function ServicesPreview() {
               >
                 {service.icon}
               </motion.div>
-              <h3 className="relative z-10 text-xl font-bold mb-3 text-slate-900 tracking-tight">{service.title}</h3>
-              <p className="relative z-10 text-base text-slate-600 leading-relaxed">{service.description}</p>
+              <h3 className="relative z-10 text-xl font-bold mb-3 text-slate-900 dark:text-slate-100 tracking-tight">{service.title}</h3>
+              <p className="relative z-10 text-base text-slate-600 dark:text-slate-300 leading-relaxed">{service.description}</p>
             </Card>
           ))}
         </div>
@@ -84,7 +84,7 @@ export default function ServicesPreview() {
           transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mt-16"
         >
-          <Link href="/services" className="text-sky-500 hover:text-sky-600 font-semibold text-base inline-flex items-center gap-2 transition-colors group">
+          <Link href="/services" className="text-sky-500 hover:text-sky-600 dark:hover:text-sky-400 font-semibold text-base inline-flex items-center gap-2 transition-colors group">
             View All Services
             <motion.svg 
               className="w-5 h-5" 

@@ -34,8 +34,8 @@ export default function ServicesPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#0F172A] tracking-tight">Our Services</h1>
-        <p className="text-xl text-[#374151] leading-relaxed">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#0F172A] dark:text-slate-100 tracking-tight">Our Services</h1>
+        <p className="text-xl text-[#374151] dark:text-slate-300 leading-relaxed">
           Comprehensive digital solutions that drive results and transform your online presence.
         </p>
       </motion.div>
@@ -63,8 +63,8 @@ export default function ServicesPage() {
             whileHover={{ y: -8 }}
           >
             <Card className="p-10 h-full">
-              <h3 className="text-2xl font-bold mb-4 text-[#0F172A] tracking-tight">{service.title}</h3>
-              <p className="text-[#374151] leading-relaxed">{service.description}</p>
+              <h3 className="text-2xl font-bold mb-4 text-[#0F172A] dark:text-slate-100 tracking-tight">{service.title}</h3>
+              <p className="text-[#374151] dark:text-slate-300 leading-relaxed">{service.description}</p>
             </Card>
           </motion.div>
         ))}

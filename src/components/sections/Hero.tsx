@@ -18,7 +18,7 @@ export default function Hero() {
       y: 0,
       filter: 'blur(0px)',
       transition: {
-        delay: i * 0.03,
+        delay: 3 + i * 0.03,
         duration: 0.5,
         ease: [0.22, 1, 0.36, 1],
       },
@@ -38,15 +38,15 @@ export default function Hero() {
     return (
       <section className="relative min-h-[90vh] flex items-center justify-center pt-16 pb-8">
         <div className="relative z-20 max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-20 text-center">
-          <div className="inline-flex items-center gap-2 mb-10 px-4 py-2 glass rounded-full shadow-lg">
+          <div className="inline-flex items-center gap-2 mb-10 px-4 py-2 glass dark:bg-slate-800 rounded-full shadow-lg">
             <div className="w-2 h-2 bg-sky-500 rounded-full" />
-            <span className="text-xs font-bold text-[#0F172A] uppercase tracking-wider">CODESCAPE</span>
+            <span className="text-xs font-bold text-[#0F172A] dark:text-white uppercase tracking-wider">CODESCAPE</span>
           </div>
           <div className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-extrabold mb-10 leading-[1.15] tracking-tighter pb-6">
-            <div className="text-[#0F172A]">{title1}</div>
+            <div className="text-[#0F172A] dark:text-slate-100">{title1}</div>
             <div className="text-sky-500">{title2}</div>
           </div>
-          <p className="text-xl sm:text-2xl lg:text-3xl text-[#374151] mb-16 max-w-4xl mx-auto leading-relaxed font-medium">
+          <p className="text-xl sm:text-2xl lg:text-3xl text-[#374151] dark:text-slate-300 mb-16 max-w-4xl mx-auto leading-relaxed font-medium">
             Your Success is our Mission
           </p>
           <Link href="/contact">
@@ -64,15 +64,15 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="inline-flex items-center gap-2 mb-10 px-4 py-2 glass rounded-full shadow-lg"
+          transition={{ duration: 0.8, delay: 3, ease: [0.22, 1, 0.36, 1] }}
+          className="inline-flex items-center gap-2 mb-10 px-4 py-2 glass dark:bg-slate-800 rounded-full shadow-lg"
         >
           <motion.div
             className="w-2 h-2 bg-sky-500 rounded-full"
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           />
-          <span className="text-xs font-bold text-[#0F172A] uppercase tracking-wider">CODESCAPE</span>
+          <span className="text-xs font-bold text-[#0F172A] dark:text-white uppercase tracking-wider">CODESCAPE</span>
         </motion.div>
 
         <div className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-extrabold mb-10 leading-[1.15] tracking-tighter pb-6">
@@ -84,7 +84,7 @@ export default function Hero() {
                 variants={letterVariants}
                 initial="hidden"
                 animate="visible"
-                className="inline-block text-[#0F172A]"
+                className="inline-block text-[#0F172A] dark:text-slate-100"
                 style={{ display: char === ' ' ? 'inline' : 'inline-block' }}
               >
                 {char === ' ' ? '\u00A0' : char}
@@ -111,8 +111,8 @@ export default function Hero() {
         <motion.p 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="text-xl sm:text-2xl lg:text-3xl text-[#374151] mb-16 max-w-4xl mx-auto leading-relaxed font-medium"
+          transition={{ duration: 0.8, delay: 4.2, ease: [0.22, 1, 0.36, 1] }}
+          className="text-xl sm:text-2xl lg:text-3xl text-[#374151] dark:text-slate-300 mb-16 max-w-4xl mx-auto leading-relaxed font-medium"
         >
           Your Success is our Mission
         </motion.p>
@@ -120,7 +120,7 @@ export default function Hero() {
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.5, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.8, delay: 4.5, ease: [0.22, 1, 0.36, 1] }}
         >
           <Link href="/contact">
             <Button size="lg" className="text-lg px-12 py-5">Get Started</Button>

@@ -33,7 +33,7 @@ export default function Testimonials() {
   }, [testimonials.length]);
 
   return (
-    <section className="py-24 md:py-32 lg:py-40 bg-white">
+    <section className="py-24 md:py-32 lg:py-40 bg-white dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -42,8 +42,8 @@ export default function Testimonials() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-5xl font-black mb-6 text-slate-900 tracking-tight leading-tight">What Our Clients Say</h2>
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
+          <h2 className="text-4xl md:text-5xl lg:text-5xl font-black mb-6 text-slate-900 dark:text-slate-100 tracking-tight leading-tight">What Our Clients Say</h2>
+          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
             Trusted by teams around the world
           </p>
         </motion.div>
@@ -59,12 +59,12 @@ export default function Testimonials() {
               className="absolute inset-0"
             >
               <Card className="p-10 h-full flex flex-col justify-between">
-                <p className="text-xl mb-8 text-slate-700 leading-relaxed font-medium">
+                <p className="text-xl mb-8 text-slate-700 dark:text-slate-300 leading-relaxed font-medium">
                   &quot;{testimonials[current].quote}&quot;
                 </p>
                 <div>
-                  <p className="font-bold text-slate-900 text-lg mb-1">{testimonials[current].author}</p>
-                  <p className="text-sm text-slate-500">{testimonials[current].role}</p>
+                  <p className="font-bold text-slate-900 dark:text-slate-100 text-lg mb-1">{testimonials[current].author}</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">{testimonials[current].role}</p>
                 </div>
               </Card>
             </motion.div>
@@ -76,7 +76,7 @@ export default function Testimonials() {
                 key={index}
                 onClick={() => setCurrent(index)}
                 className={`w-3 h-3 rounded-full transition-all ${
-                  index === current ? 'bg-sky-500 w-8' : 'bg-slate-300'
+                  index === current ? 'bg-sky-500 w-8' : 'bg-slate-300 dark:bg-slate-600'
                 }`}
               />
             ))}

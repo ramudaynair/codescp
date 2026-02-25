@@ -45,7 +45,7 @@ export default function QuickLinks() {
   ];
 
   return (
-    <section className="py-20 md:py-24 bg-white">
+    <section className="py-20 md:py-24 bg-white dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,8 +54,8 @@ export default function QuickLinks() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F172A] tracking-tight">Explore CODESCAPE</h2>
-          <p className="text-xl text-[#374151]">Everything you need to know about us</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F172A] dark:text-slate-100 tracking-tight">Explore CODESCAPE</h2>
+          <p className="text-xl text-[#374151] dark:text-slate-300">Everything you need to know about us</p>
         </motion.div>
 
         <motion.div 
@@ -82,14 +82,14 @@ export default function QuickLinks() {
             >
               <Link href={link.href}>
                 <Card className="p-6 h-full group hover:shadow-lg transition-all duration-300">
-                  <div className="text-[#0F172A] group-hover:text-sky-500 transition-colors mb-4">
+                  <div className="text-[#0F172A] dark:text-slate-100 group-hover:text-sky-500 dark:group-hover:text-sky-400 transition-colors mb-4">
                     {link.icon}
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-[#0F172A] tracking-tight group-hover:text-sky-500 transition-colors">
+                  <h3 className="text-xl font-bold mb-2 text-[#0F172A] dark:text-slate-100 tracking-tight group-hover:text-sky-500 dark:group-hover:text-sky-400 transition-colors">
                     {link.title}
                   </h3>
-                  <p className="text-[#374151] text-sm leading-relaxed mb-4">{link.description}</p>
-                  <div className="flex items-center text-sky-500 text-sm font-semibold group-hover:gap-2 transition-all">
+                  <p className="text-[#374151] dark:text-slate-300 text-sm leading-relaxed mb-4">{link.description}</p>
+                  <div className="flex items-center text-sky-500 dark:text-sky-400 text-sm font-semibold group-hover:gap-2 transition-all">
                     Learn more
                     <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

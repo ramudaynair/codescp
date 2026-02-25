@@ -44,8 +44,8 @@ export default function CareersPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#0F172A] tracking-tight">Join Our Team</h1>
-        <p className="text-xl text-[#374151] leading-relaxed">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#0F172A] dark:text-slate-100 tracking-tight">Join Our Team</h1>
+        <p className="text-xl text-[#374151] dark:text-slate-300 leading-relaxed">
           Build the future with a team that values innovation, collaboration, and excellence.
         </p>
       </motion.div>
@@ -56,7 +56,7 @@ export default function CareersPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
       >
-        <h2 className="text-3xl font-bold mb-8 text-center text-[#0F172A] tracking-tight">Our Culture</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center text-[#0F172A] dark:text-slate-100 tracking-tight">Our Culture</h2>
         <motion.div 
           className="grid md:grid-cols-3 gap-8"
           initial="hidden"
@@ -97,12 +97,12 @@ export default function CareersPage() {
             >
               <Card className="p-8 text-center h-full group">
                 <div 
-                  className="text-[#0F172A] group-hover:text-[#2A9AD6] group-hover:scale-110 transition-all duration-200 mb-4 flex justify-center"
+                  className="text-[#0F172A] dark:text-slate-100 group-hover:text-[#2A9AD6] dark:group-hover:text-sky-400 group-hover:scale-110 transition-all duration-200 mb-4 flex justify-center"
                 >
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-[#0F172A] tracking-tight">{item.title}</h3>
-                <p className="text-[#374151] leading-relaxed">{item.desc}</p>
+                <h3 className="text-xl font-bold mb-3 text-[#0F172A] dark:text-slate-100 tracking-tight">{item.title}</h3>
+                <p className="text-[#374151] dark:text-slate-300 leading-relaxed">{item.desc}</p>
               </Card>
             </motion.div>
           ))}
@@ -114,7 +114,7 @@ export default function CareersPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
       >
-        <h2 className="text-3xl font-bold mb-8 text-center text-[#0F172A] tracking-tight">Open Positions</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center text-[#0F172A] dark:text-slate-100 tracking-tight">Open Positions</h2>
         <motion.div 
           className="max-w-3xl mx-auto space-y-4"
           initial="hidden"
@@ -139,8 +139,8 @@ export default function CareersPage() {
             >
               <Card className="p-6 flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-bold mb-2 text-[#0F172A] tracking-tight">{job.title}</h3>
-                  <div className="flex gap-4 text-sm text-[#6B7280]">
+                  <h3 className="text-xl font-bold mb-2 text-[#0F172A] dark:text-slate-100 tracking-tight">{job.title}</h3>
+                  <div className="flex gap-4 text-sm text-[#6B7280] dark:text-slate-400">
                     <span>{job.location}</span>
                     <span>•</span>
                     <span>{job.type}</span>
